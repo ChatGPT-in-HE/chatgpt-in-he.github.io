@@ -18,7 +18,15 @@
  <div w3-include-html="header.html"></div> 
 
 
-    <h2>Outputs</h2>
+    <h2>Outputs - 2024 </h2>
+
+The outputs of the 2024 workshop will be listed here.
+
+    <h2>Outputs - 2023 </h2>
+
+<a href="workshop-2023/outputs/"> Click here for the 2023 workshop outputs </a>
+
+The main output of the 2023 workshop was the white paper on ChatGPT in Computing Education, which can be accessed by clicking on the image below.
 
    <h3> ChatGPT in Computing Education - A Policy White Paper </h3>
 
@@ -26,31 +34,6 @@
 
           <img src="assets/whitepaper_front_cover.png" alt="White Paper Front Cover" style="width: 100%">
     </a>
-
-    <h3> Assessment Threat Redesign Session </h3>
-
-
-    <img src="activities-photos/assessment_redesign/IMG_9040.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9041.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9042.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9043.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9044.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9045.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9046.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/assessment_redesign/IMG_9047.jpg" style="width:100%">
-
-
-   <h3> World Café Session </h3>
-
-
-    <img class="lazy" data-src="activities-photos/world_cafe/1_Employability.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/2_Misconduct-1.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/2_Misconduct-2.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/3_Delivery.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/4_New_assessments.jpg"style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/5_LLM_adoption-1.jpg" style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/5_LLM_adoption-2.jpg style="width:100%">
-    <img class="lazy" data-src="activities-photos/world_cafe/6_Timescales.jpg" style="width:100%">
 
 
 
@@ -61,42 +44,5 @@
 
 </body>
 
-<script>
-  includeHTML();
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages = document.querySelectorAll("img.lazy");    
-  var lazyloadThrottleTimeout;
-  
-  function lazyload () {
-    if(lazyloadThrottleTimeout) {
-      clearTimeout(lazyloadThrottleTimeout);
-    }    
-    
-    lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
-        }
-    }, 20);
-  }
-  
-  document.addEventListener("scroll", lazyload);
-  window.addEventListener("resize", lazyload);
-  window.addEventListener("orientationChange", lazyload);
-});
-
-
-</script> 
 
 </html>
