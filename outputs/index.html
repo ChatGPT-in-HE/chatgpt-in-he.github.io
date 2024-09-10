@@ -20,7 +20,39 @@
 
     <h2>Outputs - 2024 </h2>
 
-The outputs of the 2024 workshop will be listed here.
+<h3> Colloquium Statement </h3>
+
+The workshop outputs are summarised in the <a href="https://raw.githubusercontent.com/ChatGPT-in-HE/chatgpt-in-he.github.io/master/statement.pdf"> one-page colloquium statement </a>. The text of the statement is below:
+
+<p>
+The organisers were pleased to welcome 38 participants representing 21 UK universities to Manchester on 6th September 2024 to discuss the teaching of AI literacy in computing education. The morning session comprised of a keynote, taught AI literacy material and engaging active learning. The afternoon session was devoted to the development of seed ideas which will form working groups dedicated to develop future AI literacy policy and resources, living beyond the workshop scope.
+</p>
+
+<p>
+The attendees identified a keen need in the sector for a positive approach towards AI literacy for both staff and students. AI literacy must be embraced by our sector as a tool for future digital literacy and as a vital employment skill. AI literate graduates will excel in the future workplace and will hold the necessary skills to participate in the modern digital landscape. Through embedding AI literacy teaching into curricula, both as bespoke teaching and through integrated learning, we have the opportunity to demonstrate practical ways of adopting AI into working practices.
+</p>
+
+<p>
+The discussion around AI literacy also identified a need to adopt and model ethical practices, comprising of ethical data practices, environmental concerns, economic inequalities and privacy concerns. By developing and adopting AI codes of ethics which address these issues as part of AI literacy training, we may promote ethical AI practices.
+</p>
+
+<p>
+Finally, the workshop noted the potential of AI as a future assistive technology. Particularly, where AI can be used to transfer modalities of information (e.g., speech-to-text, text-to-image, etc.). Through adopting a positive approach to the use of AI in the classroom, higher education professionals can help to widen participation and close attainment gaps. The participants will seek to collect further information and examples of positive working practices around this area.
+</p>
+
+<p>
+Our efforts will continue beyond the workshop through the development of working groups to address the issues identified and to develop new resources for future development. The organisers would like to express their gratitude for the support given by both the attendees and their institutions.
+</p>
+
+
+<h3> Table Notes </h3>
+
+    <img class="lazy" data-src="activities-photos/2024/Ethics.jpg" style="width:100%">
+    <img class="lazy" data-src="activities-photos/2024/Framework.jpg" style="width:100%">
+    <img class="lazy" data-src="activities-photos/2024/AssistiveTech.jpg" style="width:100%">
+
+
+
 
     <h2>Outputs - 2023 </h2>
 
@@ -46,6 +78,38 @@ The main output of the 2023 workshop was the white paper on ChatGPT in Computing
 
 <script>
   includeHTML();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+  }
+  
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+
 </script> 
 
 
